@@ -3,7 +3,7 @@
     <h1 class="header">Random User Generator</h1>
 
     <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`" />
-    <h1>{{firstName}} {{lastName}}</h1>
+    <h2>{{firstName}} {{lastName}}</h2>
     <h3>Email: {{email}}</h3>
     <button @click="getUser()" :class="gender">Get Random User</button>
   </div>
@@ -57,17 +57,18 @@ body {
     justify-content: center;
     align-items: center;
 }
-header, h1 {
+h1 {
     margin: auto;
-    margin-top: 2rem;
-    padding: 2rem;
+    /* margin-top: 1rem; */
+    padding: 2rem 0;
     color: steelblue;
+    font-weight: bold;
 }
 
-h1,
+h2,
 h3 {
     margin-bottom: 1rem;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 img {
