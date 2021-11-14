@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>Random User Generator</h1>
+    <h1 class="header">Random User Generator</h1>
 
     <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`" />
     <h1>{{firstName}} {{lastName}}</h1>
@@ -57,11 +57,17 @@ body {
     justify-content: center;
     align-items: center;
 }
+header, h1 {
+    margin: auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    color: steelblue;
+}
 
 h1,
 h3 {
     margin-bottom: 1rem;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 img {
