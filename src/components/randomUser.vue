@@ -1,11 +1,12 @@
 <template>
-<div>
+  <div>
     <h1 class="header">Random User Generator</h1>
-
-    <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`" />
-    <h2>{{firstName}} {{lastName}}</h2>
-    <h3>Email: {{email}}</h3>
-    <button @click="getUser()" :class="gender">Get Random User</button>
+    <div class="container">
+      <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`" />
+      <h2>{{firstName}} {{lastName}}</h2>
+      <h3>Email: {{email}}</h3>
+      <button @click="getUser()" :class="gender">Get Random User</button>
+    </div>
   </div>
 </template>
 
@@ -57,11 +58,20 @@ body {
     justify-content: center;
     align-items: center;
 }
+.container {
+  box-shadow: 0rem 0rem 10rem 0rem #BD0062; 
+  background: #FFBEF8;
+  border-radius: 10px;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 3em 6em;
+}
+
 h1 {
     margin: auto;
     /* margin-top: 1rem; */
     padding: 2rem 0;
-    color: steelblue;
+    color: #BD0062;
     font-weight: bold;
 }
 
@@ -78,21 +88,21 @@ img {
 }
 
 .male {
-    border-color: steelblue;
-    background-color: steelblue;
+    border-color: #BD0062;
+    background-color: #BFFCF9;
 }
 
 .female {
-    border-color: pink;
-    background-color: pink;
-    color: #333;
+    border-color: #BFFCF9;
+    background-color: #BD0062;
+    color: #BFFCF9;
 }
 
 button {
     cursor: pointer;
     display: inline-block;
     background: #333;
-    color: white;
+    color: #BD0062;
     font-size: 18px;
     border: 0;
     padding: 1rem 1.5rem;
